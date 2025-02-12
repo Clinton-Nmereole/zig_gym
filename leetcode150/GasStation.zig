@@ -15,7 +15,7 @@ fn canCompleteCircuit(gas: []i64, cost: []i64) i64 {
     for (gas, 0..) |g, i| {
         total += g - cost[i];
         if (total < 0) {
-            var pseudo_start: i64 = @intCast(i);
+            const pseudo_start: i64 = @intCast(i);
             start = pseudo_start + 1;
             total = 0;
         }

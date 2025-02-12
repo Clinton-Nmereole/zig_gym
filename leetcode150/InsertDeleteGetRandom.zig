@@ -23,7 +23,7 @@ const RandomizedSet = struct {
     fn Remove(self: *RandomizedSet, val: u32) !bool {
         for (self.items.items, 0..) |item, i| {
             if (item == val) {
-                var a = self.items.orderedRemove(i);
+                const a = self.items.orderedRemove(i);
                 _ = a;
                 return true;
             }

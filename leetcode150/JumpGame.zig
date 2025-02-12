@@ -1,7 +1,7 @@
 const std = @import("std");
 
 fn JumpGame(nums: []u64) bool {
-    var ptr: u64 = @as(u64, nums.len - 2);
+    const ptr: u64 = @as(u64, nums.len - 2);
     var check: u64 = 0;
     for (1..ptr) |i| {
         if (nums[ptr - i] - check > 0) {
